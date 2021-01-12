@@ -30,7 +30,7 @@
     <%= f.hidden_field :post_id %>
 
     <%= f.label "Select User" %>
-    <%= f.collection_select :user_id, User.all, :id, :username, {include_blank: ''} %><br>
+    <%= f.collection_select :user_id, User.all, :id, :username, {include_blank: true} %><br>
     
     <%= f.fields_for :user, User.new do |user_fields| %>
         <%= user_fields.label :username, "Username" %>
